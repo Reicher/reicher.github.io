@@ -51,20 +51,17 @@ Box = function (game, id, key, letter, points, local_multi, multi, x, y) {
 
     // Interaction
     this.inputEnabled = true;
-    this.events.onInputDown.add(this.onDown, this)
-    this.events.onInputUp.add(this.onUp, this)
+    this.events.onInputDown.add(this.click, this)
     this.clicked = new Phaser.Signal()
 }
 
 Box.prototype = Object.create(Phaser.Sprite.prototype);
 Box.prototype.constructor = Box;
 
-Box.prototype.onUp = function () {
-    this.clicked.dispatch(this)
-}
-
-Box.prototype.onDown = function () {
+Box.prototype.click = function () {
     this.mark( !this.marked )
+
+    this.clicked.dispatch(this)
 }
 
 Box.prototype.mark = function (mark) {
