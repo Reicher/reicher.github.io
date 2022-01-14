@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TiggSim - Peng by peng</title>
+    <style> body { margin: 0; background: #B4D9E7; } </style>
+    <script src="src/phaser.js"></script><!--change for release -->
+    <script src="src/Boot.js"></script>
+    <script src="src/Preloader.js"></script>
+    <script src="src/Splash.js"></script>
+    <script src="src/MainMenu.js"></script>
+    <script src="src/GameEnd.js"></script>
+    <script src="src/Game.js"></script>
+    <script src="src/Player.js"></script>
+    <script src="src/People.js"></script>
+    <script src="src/Clock.js"></script>
+    <script src="src/StatusBox.js"></script>
+</head>
+<body>
+<script>
+(function() {
+    var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'TiggSim');
+    game.state.add('Boot', TS.Boot);
+    game.state.add('Preloader', TS.Preloader);
+    game.state.add('Splash', TS.Splash);
+    game.state.add('MainMenu', TS.MainMenu);
+    game.state.add('Game', TS.Game);
+    game.state.add('GameEnd', TS.GameEnd);
+    game.state.start('Boot');
+})();
+</script>
+</body>
+</html>

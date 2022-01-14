@@ -1,0 +1,1 @@
+Ett spel om tiggeri
