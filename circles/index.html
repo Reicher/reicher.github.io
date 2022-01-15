@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="1000" height="800" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="1920" height="1080" style="border:1px solid #000000;">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
@@ -46,8 +46,8 @@ drawSingleCircle = function(n, offset){
 drawPattern = function(config){
   const patternCanvas = document.createElement('canvas');
   const patternContext = patternCanvas.getContext('2d');
-  patternCanvas.width = 100;
-  patternCanvas.height = 100;
+  patternCanvas.width = 200;
+  patternCanvas.height = 200;
 
   center_x = patternCanvas.width/2
   center_y = patternCanvas.height/2
